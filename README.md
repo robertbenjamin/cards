@@ -1,5 +1,5 @@
 # flashy-flash-card
-My first independent project for GA, a flash card web app.
+My first independent project for GA: a flash card web app.
 
 ## The Initial Designs
 These were whipped up in Sketch in 30 minutes so I had some sort of guideline to follow.
