@@ -8,7 +8,7 @@ These were whipped up in Sketch in 30 minutes so I had some sort of guideline to
 
  ![The initial answer card design.](http://i.imgur.com/mwheRoc.png)
 
- ## Objectives
+## Objectives
  * Pre-load the app with some data, and allow the user to switch through questions quickly using the keyboard.
  * Allow users to flip a card over to check the actual answer.
  * Allow users to mark whether they got a question right or not. 
