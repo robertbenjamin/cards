@@ -68,7 +68,7 @@ body {
 	color: white;
 	position: relative;
 	top: 40%;
-	font-size: 45px;
+	font-size: 40px;
 	transform: translateY(-50%);
 	font-family: Open Sans;
 	font-weight: light;
@@ -117,6 +117,8 @@ margin-left: 35px;
 }
 
 .flip {
+	position: relative;
+	top: -32px;
 	height: 90px;
 	width: 280px;
 	background-color: #45ADA8;
