@@ -116,12 +116,12 @@ margin-left: 35px;
 
 .flip {
 	position: relative;
-	top: -32px;
+	top: -30px;
 	height: 90px;
 	width: 280px;
 	background-color: #45ADA8;
 	color: white;
-	font-size: 25px;
+	font-size: 30px;
 	font-weight: bold;
 }
 
