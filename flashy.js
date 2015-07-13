@@ -1,11 +1,7 @@
-// $("polygon").eq(1).click(function() {
-// 	$("body").css("background-color", "blue");
-// });
-
 var cards = [{
 	correct: null,
-	question: "What is George Washington's last name?",
-	answer: "Washington"
+	question: "What is capital of the United States of America?",
+	answer: "Washington, D.C."
 }, {
 	correct: null,
 	question: "What is a burger made of?",
@@ -23,7 +19,6 @@ var cards = [{
 	question: "Who is the main character of 'Ender's Shadow'?",
 	answer: "Bean"
 }, ];
-
 
 var side = true;
 
@@ -45,15 +40,20 @@ var wrongAnswer = function(i) {
 	cards.push(cards.shift(i));
 }
 
-var i = 0;
+var i = -1;
 
 $(".flip").click(function() {
 	flipCard(i);
 });
 
 $(".wrong").click(function() {
-	wrongAnswer(i);
-	$(".question_text").html(cards[0].question);
+	if (i != -1) {
+		wrongAnswer(i);
+		$(".question_text").html(cards[0].question);
+	} else {
+		$(".question_text").html("Please click the right arrow to start!");
+	}
+
 });
 
 $(".right").click(function() {
@@ -63,23 +63,50 @@ $(".right").click(function() {
 			$(".question_text").html(cards[0].question);
 			side: true;
 		} else {
-			$(".question_text").html("No more questions, good job!");
+			console.log("ahhhhh")
+				// $(".question_text").html("No more questions, good job!");
 		}
 	} else {
-
+		console.log("finished?");
+		$(".question_text").html("No more questions, good job!");
+		cards = [];
 	}
 });
+
 $(".next_card").click(function() {
 	i++;
 	$(".question_text").html(cards[i].question);
+	$("body").unbind();
 });
 
-// $(".flip").click(function() {
-// 	$("body").css("background-color", "red");
-// });
+$(document).keydown(function(e) {
+	if (e.which === 82) {
+		console.log("right")
+	}
+});
 
-// array.shift({
-// 	correct: null,
-// 	question: "Lololol",
-// 	answer: "Lolz"
-// });
+/* 
+$(document).keydown(function(e) {
+	if (e.which === 87) {
+		console.log("wrong")
+	}
+});
+
+$(document).keydown(function(e) {
+	if (e.which === 32) {
+		console.log("spacebar!")
+	}
+});
+
+$(document).keydown(function(e) {
+	if (e.which === 39) {
+		console.log("next card")
+	}
+});
+
+array.shift({
+	correct: null,
+	question: "Lololol",
+	answer: "Lolz"
+});
+*/
