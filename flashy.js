@@ -1,6 +1,3 @@
-// $("polygon").eq(0).click(function() {
-// 	$("body").css("background-color", "red");
-// });
 // $("polygon").eq(1).click(function() {
 // 	$("body").css("background-color", "blue");
 // });
@@ -27,29 +24,61 @@ var cards = [{
 	answer: "Bean"
 }, ];
 
-for (i = 0; i < (cards.length - 1); i++) {
-	$("polygon").eq(1).click(function() {
-		$("body").css("background-color", "blue");
-		console.log(i);
-	});
-}
 
 var side = true;
 
-var flipCard = function(){
+var flipCard = function(i) {
 	if (side) {
-		$(".question_text").html(cards[0].question);
+		$(".question_text").html(cards[i].answer);
 		side = false;
 	} else {
-		$(".question_text").html(cards[0].answer);
+		$(".question_text").html(cards[i].question);
 		side = true;
 	}
 }
 
-$(".flip").click();
+var rightAnswer = function(i) {
+	cards.splice(i, 1);
+}
 
+var wrongAnswer = function(i) {
+	cards.push(cards.shift(i));
+}
 
-// array.push({
+var i = 0;
+
+$(".flip").click(function() {
+	flipCard(i);
+});
+
+$(".wrong").click(function() {
+	wrongAnswer(i);
+	$(".question_text").html(cards[0].question);
+});
+
+$(".right").click(function() {
+	if (i < cards.length - 1) {
+		if (cards.length > 0) {
+			rightAnswer(i);
+			$(".question_text").html(cards[0].question);
+			side: true;
+		} else {
+			$(".question_text").html("No more questions, good job!");
+		}
+	} else {
+
+	}
+});
+$(".next_card").click(function() {
+	i++;
+	$(".question_text").html(cards[i].question);
+});
+
+// $(".flip").click(function() {
+// 	$("body").css("background-color", "red");
+// });
+
+// array.shift({
 // 	correct: null,
 // 	question: "Lololol",
 // 	answer: "Lolz"

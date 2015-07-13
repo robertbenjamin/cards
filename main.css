@@ -47,7 +47,7 @@ table {
 	border-spacing: 0;
 }
 
-/* /// /// /// /// /// */
+/* 					///						 */
 
 body {
 	background-color: #547980;
@@ -55,8 +55,8 @@ body {
 }
 
 .main_box {
-	display: inline-block;
-	margin: 100px auto 0 auto;
+	display: block;
+	margin: 90px auto 0 auto;
 	height: 300px;
 	width: 500px;
 	background-color: #9DE0AD
@@ -85,9 +85,7 @@ button {
 }
 
 svg {
-	top: 50%;
-	position: relative;
-	transform: translateY(-50%);
+	margin: 0 105px -80px 105px;
 	display: inline-block;
 	color: white;
 	width: 50px;
@@ -96,13 +94,13 @@ svg {
 	pointer-events: visiblePainted;
 }
 
-.prev_card {
+/*.prev_card {
 margin-right: 35px;
 }
 
 .next_card {
 margin-left: 35px;
-}
+}*/
 
 .answer_buttons {
 	margin-top: 15px;
