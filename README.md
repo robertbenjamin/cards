@@ -4,9 +4,9 @@ My first independent project for GA: a flash card web app.
 ## The Initial Designs
 These were whipped up in Sketch in 30 minutes so I had some sort of guideline to follow.
 
- ![The initial question card design.](http://i.imgur.com/88wDqVF.png)
+ ![The updated question card design, with arrows.](http://i.imgur.com/dc0gwnU.png)
 
- ![The initial answer card design.](http://i.imgur.com/mwheRoc.png)
+ ![The updated answer card design, with arrows.](http://i.imgur.com/2TA2Yjn.png)
 
 ## Objectives
  - Pre-load the app with some data, and allow the user to switch through questions quickly using the keyboard.
