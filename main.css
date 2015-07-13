@@ -47,92 +47,87 @@ table {
 	border-spacing: 0;
 }
 
-/* 					///						 */
+/* General */
 
 body {
-	background-color: #547980;
-	text-align: center;
+  background-color: #547980;
+  text-align: center;
 }
+/* Question Box */
 
 .main_box {
-	display: block;
-	margin: 90px auto 0 auto;
-	height: 350px;
-	width: 550px;
-	background-color: #9DE0AD
+  display: block;
+  margin: 90px auto 0 auto;
+  height: 350px;
+  width: 550px;
+  background-color: #9DE0AD
 }
 
 .question_text {
-	text-align: left;
-	padding: 40px;
-	color: white;
-	position: relative;
-	top: 40%;
-	font-size: 40px;
-	transform: translateY(-50%);
-	font-family: Open Sans;
-	font-weight: light;
+  text-align: center;
+  padding: 60px 40px;
+  color: white;
+  position: inline-block;
+  font-size: 55px;
+  font-family: Open Sans;
+  line-height: 1.3em;
 }
-
-.instructions {
-	color: white;
-	font-weight: light;
-}
+/* Fixes for Buttons */
 
 button {
-	border: 0;
-	display: inline-block;
+  border: 0;
+  display: inline-block;
 }
 
 svg {
-	margin: 0 105px -80px 105px;
-	display: inline-block;
-	color: white;
-	width: 50px;
-	height: 50px;
-	fill: white;
-	pointer-events: visiblePainted;
+  margin: 20px 125px -65px 125px;
+  display: inline-block;
+  color: white;
+  width: 50px;
+  height: 50px;
+  fill: white;
+  pointer-events: visiblePainted;
 }
-
-/*.prev_card {
-margin-right: 35px;
-}
-
-.next_card {
-margin-left: 35px;
-}*/
+/* Answer Buttons */
 
 .answer_buttons {
-	margin-top: 15px;
-	margin-bottom: 30px;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+img {
+  height: 60px;
 }
 
 .wrong {
-	height: 90px;
-	width: 90px;
-	margin-right: 15px;
-	background-color: #594F4F;
+  height: 90px;
+  width: 90px;
+  margin-right: 10px;
+  background-color: #594F4F;
 }
 
 .flip {
-	position: relative;
-	top: -30px;
-	height: 90px;
-	width: 280px;
-	background-color: #45ADA8;
-	color: white;
-	font-size: 30px;
-	font-weight: bold;
+  position: relative;
+  top: -17px;
+  height: 90px;
+  width: 341px;
+  background-color: #45ADA8;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
 }
 
 .right {
-	height: 90px;
-	width: 90px;
-	margin-left: 15px;
-	background-color: #C44D58;
+  height: 90px;
+  width: 90px;
+  margin-left: 10px;
+  background-color: #C44D58;
 }
+/* Footer Instuctions */
 
 .instructions {
-	font-family: Open Sans;
-	font-size: 14px;
+  color: white;
+  font-family: Open Sans;
+  font-size: 15px;
+  line-height: 1.5em;
 }
