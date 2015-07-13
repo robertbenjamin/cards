@@ -76,16 +76,23 @@ $(".right").click(function() {
 $(".next_card").click(function() {
 	i++;
 	$(".question_text").html(cards[i].question);
-	$("body").unbind();
 });
 
+$(document).keydown(function(e) {
+	if (e.which === 39) {
+		console.log("next card");
+		i++;
+		$(".question_text").html(cards[i].question);
+	}
+});
+
+/* 
 $(document).keydown(function(e) {
 	if (e.which === 82) {
 		console.log("right")
 	}
 });
 
-/* 
 $(document).keydown(function(e) {
 	if (e.which === 87) {
 		console.log("wrong")
@@ -95,12 +102,6 @@ $(document).keydown(function(e) {
 $(document).keydown(function(e) {
 	if (e.which === 32) {
 		console.log("spacebar!")
-	}
-});
-
-$(document).keydown(function(e) {
-	if (e.which === 39) {
-		console.log("next card")
 	}
 });
 
