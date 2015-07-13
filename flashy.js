@@ -17,6 +17,20 @@ var deck = {
 	}],
 	completed_cards: [],
 	current_index: 0,
+	nextCard: function() {
+		if (this.current_index === this.cards.length - 1) {
+			this.current_index = 0;
+		} else {
+			this.current_index++;
+		};
+	},
+	prevCard: function() {
+			if (this.current_index === 0) {
+				this.current_index = (this.cards.length - 1);
+			} else {
+				this.current_index--;
+			};
+	},
 	markCorrect: function() {
 		var currentCard = this.getCurrent();
 		this.completed_cards.push(currentCard);
@@ -52,6 +66,18 @@ function renderCard() {
 	}
 }
 
+$(".next_card").click(function() {
+	side = "question";
+	deck.nextCard();
+	renderCard();
+});
+
+$(".prev_card").click(function() {
+	side = "question";
+	deck.prevCard();
+	renderCard();
+});
+
 $(".right").click(function() {
 	side = "question";
 	deck.markCorrect();
@@ -71,7 +97,6 @@ $(".flip").click(function() {
 	renderCard();
 });
 
- 
 /*
 
 $(document).keyup(function(e) {
