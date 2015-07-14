@@ -72,7 +72,7 @@ function renderCard() {
 	if (currentCard.question) {
 		$(".question_text").html(currentCard[side]);
 	} else {
-		$("body").addClass("WINNER");
+		$("*").addClass("WINNER");
 		$(".question_text").html("WINNER");
 		var nyanCat = new Audio('https://archive.org/download/nyannyannyan/NyanCatoriginal.mp3');
 		nyanCat.play();
