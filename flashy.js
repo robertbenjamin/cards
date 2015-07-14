@@ -17,6 +17,14 @@ var deck = {
 	}],
 	completed_cards: [],
 	current_index: 0,
+	addCard: function() {
+		var newQuestion = prompt("Enter a question!");
+		var newAnswer = prompt("Enter the answer!");
+		this.cards.push({
+			question: newQuestion,
+			answer: newAnswer
+		});
+	},
 	nextCard: function() {
 		if (this.current_index === this.cards.length - 1) {
 			this.current_index = 0;
@@ -109,6 +117,11 @@ $(".wrong").click(wrong);
 
 $(".flip").click(flip);
 
+$(".add_card").click(function(){
+	deck.addCard();
+	console.log("add card?")
+});
+
 //Listen for key presses
 $(document).keyup(function(e) {
 	switch (e.which) {
@@ -136,11 +149,3 @@ $(document).keyup(function(e) {
 			console.log("default");
 	}
 });
-
-/*
-array.shift({
-	correct: null,
-	question: "Lololol",
-	answer: "Lolz"
-});
-*/
