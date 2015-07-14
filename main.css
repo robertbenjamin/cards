@@ -54,6 +54,102 @@ body {
   text-align: center;
 }
 
+/* Question Box */
+
+.main_box {
+  display: block;
+  margin: 20px auto 0 auto;
+  height: 350px;
+  width: 550px;
+  background-color: #9DE0AD
+}
+
+.question_text {
+  text-align: center;
+  padding: 60px 40px;
+  color: white;
+  position: inline-block;
+  font-size: 55px;
+  font-family: Open Sans;
+  line-height: 1.3em;
+}
+/* Fixes for SVGs */
+
+button {
+  border: 0;
+  display: inline-block;
+}
+
+svg {
+	padding: 0;
+	margin-bottom: -10px;
+  display: inline-block;
+  color: white;
+  width: 50px;
+  height: 50px;
+  fill: white;
+  pointer-events: visiblePainted;
+}
+
+/* Add Card Button */
+
+.add_card {
+	color: LightSteelBlue;
+	height: 90px;
+	width: 341px;
+	background-color: #E5FCC2;
+	font-family: Open Sans;
+	font-size: 35px;
+	margin: 20px 20px 0 20px;
+}
+
+/* Answer Buttons */
+
+.answer_buttons {
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+img {
+  height: 60px;
+}
+
+.wrong {
+  height: 90px;
+  width: 90px;
+  margin-right: 10px;
+  background-color: #594F4F;
+}
+
+.flip {
+  position: relative;
+  top: -17px;
+  height: 90px;
+  width: 341px;
+  background-color: #45ADA8;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.right {
+  height: 90px;
+  width: 90px;
+  margin-left: 10px;
+  background-color: #C44D58;
+}
+
+/* Footer Instuctions */
+
+.instructions {
+  color: white;
+  font-family: Open Sans;
+  font-size: 15px;
+  line-height: 1.5em;
+}
+
+/* Fancy Animations */
+
 .WINNER {
   background-image: url("http://media.giphy.com/media/WC0DCFkLq4faU/giphy.gif");
 
@@ -305,92 +401,7 @@ body {
   100% { -webkit-transform: matrix3d(-1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 340, -100, 0, 1); transform: matrix3d(-1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1, 0, 340, -100, 0, 1); } 
 }
 
-/* Question Box */
-
-.main_box {
-  display: block;
-  margin: 20px auto 0 auto;
-  height: 350px;
-  width: 550px;
-  background-color: #9DE0AD
-}
-
-.question_text {
-  text-align: center;
-  padding: 60px 40px;
-  color: white;
-  position: inline-block;
-  font-size: 55px;
-  font-family: Open Sans;
-  line-height: 1.3em;
-}
-/* Fixes for SVGs */
-
-button {
-  border: 0;
-  display: inline-block;
-}
-
-svg {
-	padding: 0;
-	margin-bottom: -10px;
-  display: inline-block;
-  color: white;
-  width: 50px;
-  height: 50px;
-  fill: white;
-  pointer-events: visiblePainted;
-}
-
-/* Add Card Button */
-
-.add_card {
-	color: LightSteelBlue;
-	height: 90px;
-	width: 341px;
-	background-color: #E5FCC2;
-	font-family: Open Sans;
-	font-size: 35px;
-	margin: 20px 20px 0 20px;
-}
-
-/* Answer Buttons */
-
-.answer_buttons {
-  margin-top: 15px;
-  margin-bottom: 30px;
-}
-
-img {
-  height: 60px;
-}
-
-.wrong {
-  height: 90px;
-  width: 90px;
-  margin-right: 10px;
-  background-color: #594F4F;
-}
-
-.flip {
-  position: relative;
-  top: -17px;
-  height: 90px;
-  width: 341px;
-  background-color: #45ADA8;
-  color: white;
-  font-size: 30px;
-  font-weight: bold;
-}
-
-.right {
-  height: 90px;
-  width: 90px;
-  margin-left: 10px;
-  background-color: #C44D58;
-}
-
-/* Fancy Animations */
+/* Right & Wrong Buttons Hover Animation */
 
 .right:hover, .wrong:hover {
   -webkit-animation: animation 750ms linear both;
@@ -425,11 +436,3 @@ img {
   100% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); } 
 }
 
-/* Footer Instuctions */
-
-.instructions {
-  color: white;
-  font-family: Open Sans;
-  font-size: 15px;
-  line-height: 1.5em;
-}
