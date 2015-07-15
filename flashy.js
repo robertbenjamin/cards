@@ -16,7 +16,7 @@ var deck = {
 		answer: "Bean"
 	},{
 		question: "Who founded GA?",
-		answer: "Jake Schwartz, Adam Pritzker, Matthew Brimer, and Brad Hargreaves."
+		answer: "Jake Schwartz, Adam Pritzker, Matthew Brimer."
 	}],
 
 	completed_cards: [],
