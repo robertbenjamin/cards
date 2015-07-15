@@ -17,6 +17,7 @@ var deck = {
 	}],
 	completed_cards: [],
 	current_index: 0,
+	currentScore: document.cookie.substring(6, 8),
 	addCard: function() {
 		var newQuestion = prompt("Enter a question!");
 		var newAnswer = prompt("Enter the answer!");
@@ -46,6 +47,7 @@ var deck = {
 		if (this.current_index >= this.cards.length) {
 			this.current_index = 0;
 		};
+		this.currentScore++;
 	},
 	markIncorrect: function() {
 		if (this.current_index === this.cards.length - 1) {
@@ -60,6 +62,12 @@ var deck = {
 		} else {
 			return this.cards[this.current_index];
 		}
+	},
+	updateScore: function() {
+		document.cookie = "score=" + this.currentScore;
+	},
+	resetScore: function() {
+		document.cookie = "score=0";
 	}
 };
 
@@ -71,6 +79,8 @@ function renderCard() {
 	var currentCard = deck.getCurrent();
 	if (currentCard.question) {
 		$(".question_text").html(currentCard[side]);
+		deck.updateScore();
+		$(".score").html("Current Score Is: " + document.cookie.substring(6, 8));
 	} else {
 		$("*").addClass("WINNER");
 		$(".question_text").html("WINNER");
@@ -120,7 +130,7 @@ $(".wrong").click(wrong);
 
 $(".flip").click(flip);
 
-$(".add_card").click(function(){
+$(".add_card").click(function() {
 	deck.addCard();
 	console.log("add card?")
 });
