@@ -68,7 +68,6 @@ body {
   text-align: center;
   padding: 60px 40px;
   color: white;
-  position: inline-block;
   font-size: 55px;
   font-family: Open Sans;
   line-height: 1.3em;
@@ -88,7 +87,6 @@ svg {
   width: 50px;
   height: 50px;
   fill: white;
-  pointer-events: visiblePainted;
 }
 
 /* Add Card Button */
@@ -139,7 +137,15 @@ img {
   background-color: #C44D58;
 }
 
+
 /* Footer Instuctions */
+
+.score {
+	color: white;
+	font-family: Open Sans;
+	font-size: 25px;
+	margin: -20px 0 20px 0;
+}
 
 .instructions {
   color: white;
