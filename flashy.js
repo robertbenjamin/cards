@@ -14,7 +14,11 @@ var deck = {
 	}, {
 		question: "Who is the main character of 'Ender's Shadow'?",
 		answer: "Bean"
+	},{
+		question: "Who founded GA?",
+		answer: "Jake Schwartz, Adam Pritzker, Matthew Brimer, and Brad Hargreaves."
 	}],
+
 	completed_cards: [],
 	current_index: 0,
 	currentScore: document.cookie.substring(6, 8),
