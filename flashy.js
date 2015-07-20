@@ -22,6 +22,8 @@ var deck = {
 	completed_cards: [],
 	current_index: 0,
 	currentScore: document.cookie.substring(6, 8),
+	// nice clean approach!
+	// one note, it would be awesome to do this without alert boxes (i.e. modals or some other UI element)
 	addCard: function() {
 		var newQuestion = prompt("Enter a question!");
 		var newAnswer = prompt("Enter the answer!");
@@ -118,6 +120,7 @@ function wrong() {
 }
 
 function flip() {
+	// nice use of a ternary operator
 	side === "question" ? side = "answer" : side = "question"
 	renderCard();
 }
@@ -140,6 +143,7 @@ $(".add_card").click(function() {
 });
 
 //Listen for key presses
+// very clean approach to handling keyboard input!
 $(document).keyup(function(e) {
 	switch (e.which) {
 		case 39:

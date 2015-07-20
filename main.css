@@ -164,7 +164,7 @@ img {
 }
 
 /* Generated with Bounce.js. Edit at http://goo.gl/aesEoV */
-
+/* I might move this into a separate CSS file just to keep things a bit more organized. */
 @-webkit-keyframes slinky { 
   0% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -260, 0, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -260, 0, 0, 1); }
   0.92% { -webkit-transform: matrix3d(0.817, 0.577, 0, 0, -0.577, 0.817, 0, 0, 0, 0, 1, 0, -216.549, -26.519, 0, 1); transform: matrix3d(0.817, 0.577, 0, 0, -0.577, 0.817, 0, 0, 0, 0, 1, 0, -216.549, -26.519, 0, 1); }
