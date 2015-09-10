@@ -1,4 +1,4 @@
-# fancy-flash-card
+# cards
 My first independent project for GA: a flash card web app.
 
 ## The Initial Designs
