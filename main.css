@@ -66,7 +66,7 @@ body {
 
 .question_text {
   text-align: center;
-  padding: 60px 40px;
+  padding: 40px 40px;
   color: white;
   font-size: 55px;
   font-family: Open Sans;
@@ -156,10 +156,11 @@ img {
 
 /* For Smaller Screen */
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .main_box {
-    height: 400px;
-    width: 100%;
+    min-height: 250px;
+    height: auto;
+    width: 95%;
   }
   .add_card {
     width: 60%;
@@ -168,6 +169,6 @@ img {
     width: 50%;
   }
   .question_text {
-    font-size: 10vw;
+    font-size: 9vw;
   }
 }
