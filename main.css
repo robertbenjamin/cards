@@ -163,12 +163,27 @@ img {
     width: 95%;
   }
   .add_card {
+    width: 60%;
+  }
+  .flip {
     width: 50%;
+  }
+  .question_text {
+    font-size: 9vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .add_card {
+    width: 35%;
   }
   .flip {
     width: 40%;
   }
-  .question_text {
-    font-size: 9vw;
+  .wrong {
+    margin-right: 5px;
+  }
+  .right {
+    margin-left: 5px;
   }
 }
