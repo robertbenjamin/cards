@@ -22,13 +22,23 @@ var deck = {
 	completed_cards: [],
 	current_index: 0,
 	currentScore: document.cookie.substring(6, 8),
+
 	addCard: function() {
-		var newQuestion = prompt("Enter a question!");
-		var newAnswer = prompt("Enter the answer!");
-		this.cards.push({
-			question: newQuestion,
-			answer: newAnswer
-		});
+		var self = this;
+		var newQ = prompt("Enter a question. (Less than 60 characters please!)");
+		if (newQ.length < 60) {
+			var newA = prompt("Enter the answer. (Less than 60 characters please!)");
+			if (newA.length < 60) {
+				self.cards.push({
+					question: newQ,
+					answer: newA
+				});
+			} else {
+				alert("Answer's too long, make sure it's less than 60 characters!")
+			}
+		} else {
+			alert("Question's too long, make sure it's less than 60 characters!")
+		}
 	},
 	nextCard: function() {
 		if (this.current_index === this.cards.length - 1) {
@@ -86,10 +96,7 @@ function renderCard() {
 		deck.updateScore();
 		$(".score").html("Current Score Is: " + document.cookie.substring(6, 8));
 	} else {
-		$("*").addClass("WINNER");
-		$(".question_text").html("WINNER");
-		var nyanCat = new Audio('https://archive.org/download/nyannyannyan/NyanCatoriginal.mp3');
-		nyanCat.play();
+		$(".question_text").html("You've completed all your cards!");
 	}
 }
 
@@ -124,6 +131,8 @@ function flip() {
 
 renderCard();
 
+// Set up event listeners
+
 $(".next_card").click(nextCard);
 
 $(".prev_card").click(prevCard);
@@ -140,6 +149,7 @@ $(".add_card").click(function() {
 });
 
 //Listen for key presses
+
 $(document).keyup(function(e) {
 	switch (e.which) {
 		case 39:
@@ -163,6 +173,6 @@ $(document).keyup(function(e) {
 			break;
 
 		default:
-			console.log("default");
+			break;
 	}
 });
