@@ -20,6 +20,7 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
+  font-family: 'Open Sans';
 	font: inherit;
 	vertical-align: baseline;
 }
@@ -69,14 +70,15 @@ body {
   padding: 40px 40px;
   color: white;
   font-size: 55px;
-  font-family: Open Sans;
+  font-family: 'Open Sans';
   line-height: 1.3em;
 }
 /* Fixes for SVGs */
 
 button {
   border: 0;
-  display: inline-block;
+  display: inline;
+  font-family: 'Open Sans';
 }
 
 svg {
@@ -108,11 +110,9 @@ svg {
   margin-bottom: 30px;
 }
 
-img {
-  height: 60px;
-}
-
 .wrong {
+  background: url("img/wrong.png") no-repeat center center;
+  background-size: 80%;
   height: 90px;
   width: 90px;
   margin-right: 10px;
@@ -121,7 +121,7 @@ img {
 
 .flip {
   position: relative;
-  top: -17px;
+  top: -31px;
   height: 90px;
   width: 341px;
   background-color: #45ADA8;
@@ -131,6 +131,8 @@ img {
 }
 
 .right {
+  background: url("img/check.png") no-repeat center center;
+  background-size: 85%;
   height: 90px;
   width: 90px;
   margin-left: 10px;
@@ -175,10 +177,20 @@ img {
 
 @media (max-width: 600px) {
   .add_card {
-    width: 35%;
+    width: 40%;
+    height: 60px;
   }
   .flip {
     width: 40%;
+    height: 60px;
+    top: -16px;
+  }
+  img {
+    height: 30px;
+  }
+  .wrong, .right {
+    height: 60px;
+    width: 60px;
   }
   .wrong {
     margin-right: 5px;
