@@ -1,6 +1,6 @@
 var deck = {
   cards: [{
-    question: "What is capital of the United States of America?",
+    question: "What is the capital of the United States of America?",
     answer: "Washington, D.C."
   }, {
     question: "What is a burger made of?",
